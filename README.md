@@ -3,6 +3,7 @@
 ## Introduction
 Yelp is a vertical search engine that allows users to search for place of business. The most search items are related to food, coffee, basically places where goods are delivered to the consumer. It is a platform that allows users to rate the service or good.
 
+The project will focus on sentimential analysis based on the context of the topic. The focus of the context will be Service and Goods, each document will fit into one or both these contexts. After determining that each document will 
 The tool will track and differentiate the performance of customer services versus goods provided by a company over time. Yelp provides customer feedback with a star rating and review. The star rating does not provide specific reasons why the business earns the rating. We will take data from Yelp and use NLP to find reviews that address a business's customer service or product quality.  We will use Yelp datasets available on their website for educational use.The dataset is a subset of Yelps businesses, reviews, and users.
 
 ## Problem
@@ -11,7 +12,7 @@ The tool will track and differentiate the performance of customer services versu
 ## Task
 * Task 1 - Gather data from Yelp Open Dataset.
 * Task 2 - Reduce dataset.
-* Task 3 - 
+* Task 3 -
 
 
 ## Useful links
