@@ -22,4 +22,5 @@ The tool will track and differentiate the performance of customer services versu
 * [Meta-Toolkit](https://meta-toolkit.org/)
 * [NLTK Text Classification](http://text-processing.com/demo/sentiment/)
 * [Illini Wiki Yelp Project](https://wiki.illinois.edu/wiki/pages/viewpage.action?spaceKey=timanpub&title=Capstone+design)
+* [Capstone Report for Data Science Specialization](https://statsbyslough.files.wordpress.com/2015/11/projectreport2.pdf)
 * [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#links)
