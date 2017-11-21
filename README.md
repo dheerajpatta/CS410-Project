@@ -16,9 +16,9 @@ The tool will track and differentiate the performance of customer services versu
 
 ## Task definitions
 * Task 1 - Gather data from Yelp Open Dataset, and reduce it.
-* Task 2 -
-* Task 3 -
-* Task 4 -
+* Task 2 -Filter data collected using user inputs.
+* Task 3 -Clustering data to facilitate browsing. Define similatry function to cluster. Should we use user input to define clustering and allow for ranking? What is cutoff 10 items? 
+* Task 4 -Test Clustering and visualize differences. 
 
 ## Methodology
 
