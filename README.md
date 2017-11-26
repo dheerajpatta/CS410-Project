@@ -1,4 +1,6 @@
 # CS410-Project
+# Project Title: Yelp Rating Analysis
+## Team 47: Paul Moreno and Ilean Monterrubio Jr
 
 ## Abstract
 
