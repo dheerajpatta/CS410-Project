@@ -18,7 +18,7 @@ The tool will track and differentiate the performance of customer services versu
 ## Task definitions
 * Task 1 - Gather data from Yelp Open Dataset, and reduce it.
   We are initially gathering 100 english comments from the dataset to do our intial training data.
-* Task
+* Task Topic modelling for funsies to see what the reviews main topics are based on
 
 * Task - Write code tokenize words in dataset to see what words are common and which words people use to describe our different word distributions. Record output and show that we manually choose useful thetas in our sentiment analysis.
 * Task - Define 
