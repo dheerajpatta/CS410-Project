@@ -17,9 +17,20 @@ The tool will track and differentiate the performance of customer services versu
 
 ## Task definitions
 * Task 1 - Gather data from Yelp Open Dataset, and reduce it.
-* Task 2 -Filter data collected using user inputs.
-* Task 3 -Clustering data to facilitate browsing. Define similatry function to cluster. Should we use user input to define clustering and allow for ranking? What is cutoff 10 items? 
-* Task 4 -Test Clustering and visualize differences. 
+  We are initially gathering 100 english comments from the dataset to do our intial training data.
+* Task
+
+* Task - Write code tokenize words in dataset to see what words are common and which words people use to describe our different word distributions. Record output and show that we manually choose useful thetas in our sentiment analysis.
+* Task - Define 
+  Theta 1 for Good Reviews Service
+  Theta 2 for Bad Service
+  Theta 3 for Good Quality Goods and products
+  Theta 4 for Bad quality Goods and products
+
+Theta Background
+* Task  -Filter data collected using user inputs.
+* Task  -Clustering data to facilitate browsing. Define similatry function to cluster. Should we use user input to define clustering and allow for ranking? What is cutoff 10 items? 
+* Task  -Test Clustering and visualize differences. 
 
 ## Methodology
 
