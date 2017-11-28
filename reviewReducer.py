@@ -6,8 +6,8 @@ import json
 import metapy
 from itertools import islice
 
-a = open('new-review.json', 'w+')
-f = open('review.json')
-for line in islice(f, 100):
-    a.write(line)
-a.close()
+o = open('new-review.json', 'w+')
+r = open('review.json')
+for line in islice(r, 100):
+    o.write(line)
+o.close()
