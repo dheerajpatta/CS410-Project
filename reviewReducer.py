@@ -8,6 +8,6 @@ from itertools import islice
 
 o = open('new-review.json', 'w+')
 r = open('review.json')
-for line in islice(r, 100):
+for line in islice(r, 500):
     o.write(line)
 o.close()
