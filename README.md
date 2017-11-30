@@ -44,3 +44,5 @@ Theta Background
 * [CS410 Spring 2014 Projects](http://web.engr.illinois.edu/~massung1/su14-cs410/past-projects.html)
 * [Capstone Report for Data Science Specialization](https://statsbyslough.files.wordpress.com/2015/11/projectreport2.pdf)
 * [Markdown Here Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#links)
+* (http://opensourceforu.com/2016/12/analysing-sentiments-nltk/)
+* (http://www.nltk.org/howto/sentiment.html)
