@@ -1,6 +1,6 @@
 # Project Title: Yelp Rating Analysis
 Team 47: Paul Moreno and Ilean Monterrubio Jr
-## 
+
 ## Abstract
 
 ## Introduction
@@ -16,25 +16,32 @@ The tool will track and differentiate the performance of customer services versu
 ## Background
 
 ## Task definitions
-* Task 1 - Gather data from Yelp Open Dataset, and reduce it.
-  We are initially gathering 100 english comments from the dataset to do our intial training data.
-* Task Topic modelling for funsies to see what the reviews main topics are based on
-
-* Task - Write code tokenize words in dataset to see what words are common and which words people use to describe our different word distributions. Record output and show that we manually choose useful thetas in our sentiment analysis.
-* Task - Define 
+1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
+2. Topic mining, finding the commonly used to describe to create the training data, which is \Theta .
+  * Many code already that tokenizes the data. Will modify some existing code for this.
+3. Write code tokenize words in dataset to see what words are common and which words people use to describe our different word distributions. Record output and show that we manually choose useful thetas in our sentiment analysis.
+4. Task - Define
   Theta 1 for Good Reviews Service
   Theta 2 for Bad Service
   Theta 3 for Good Quality Goods and products
   Theta 4 for Bad quality Goods and products
-
-Theta Background
+  Theta Background
 * Task  -Filter data collected using user inputs.
-* Task  -Clustering data to facilitate browsing. Define similatry function to cluster. Should we use user input to define clustering and allow for ranking? What is cutoff 10 items? 
-* Task  -Test Clustering and visualize differences. 
+* Task  -Clustering data to facilitate browsing. Define similatry function to cluster. Should we use user input to define clustering and allow for ranking? What is cutoff 10 items?
+* Task  -Test Clustering and visualize differences.
+
+## Notes (this makes no sense i know just writing my ideas)
+We want to categorize each comment into either Service or Goods. Then we want to run the sentiment analysis based on the collection of each category. After the analysis we can determine the distribution based of each category.
+
+The sentiment analysis will be done using the NLTk and the star system will used to see if the prediction of the sentiment analysis is correct, 5-4 stars will be positive and 1-2 star is negative and 3 is neutral.
+
+
+
+
 
 ## Methodology
 
-## Conclusion 
+## Conclusion
 
 ## Useful links
 * [Yelp Open Dataset](https://www.yelp.com/dataset)
