@@ -1,7 +1,7 @@
 # Team 47: Yelp Rating Analysis
 Paul Moreno and Ilean Monterrubio Jr
 
-This project is the University of Illinois Urbana-Champaign CS 410 Text Informations Systems class.
+This project is for the University of Illinois Urbana-Champaign CS-410 Text Informations Systems class.
 
 ## Abstract
 This section will contain an abstract of the project.
@@ -21,24 +21,24 @@ The tool will track and differentiate the performance of customer services versu
 1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
    * Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
    * Each category will have their own Theat Background:
-    * Service - which is if the comment is refering to the service they recieved.
-    * Goods - which is if the comment is refering to the food or any product recieved.
-    * The first 50 or 100 reviews will be used to create the training data.
-* Create Topic Modelling function.
-* Topic model using training data, each traning data will be run independently.
-  * Create new files:
-    * service.csv - This file will collected all comments related to service, upper limit of 500 comments.
-    * goods.csv - This file will collected all comments related to good recieved, upper limit of 500 comments.
-    * Find Precision, Recall, F1, for each file.
-      * If less than .80 return to Task 3 .
-* Create sentiment analysis fucntion.
-* Run sentiment analysis on each file.
-  * Use Stars field to compare accuracy of analysis.
-   * 4-5 stars means positive review.
-   * 3 stars means neutral review.
-   * 1-2 stars means negative review.
-  * Find Precision, Recall, F1, for each file.
-* Visualize all data, to better analysis accuracy of tool created.
+     * Service - which is if the comment is refering to the service they recieved.
+     * Goods - which is if the comment is refering to the food or any product recieved.
+     * The first 50 or 100 reviews will be used to create the training data.
+2. Create Topic Modelling function.
+3. Topic model using training data, each traning data will be run independently.
+   * Create new files:
+     * service.csv - This file will collected all comments related to service, upper limit of 500 comments.
+     * goods.csv - This file will collected all comments related to good recieved, upper limit of 500 comments.
+     * Find Precision, Recall, F1, for each file.
+       * If less than .80 return to Task 3 .
+4. Create sentiment analysis fucntion.
+5. Run sentiment analysis on each file.
+   * Use Stars to compare accuracy of analysis.
+    * 4-5 stars means positive review.
+    * 3 stars means neutral review.
+    * 1-2 stars means negative review.
+   * Find Precision, Recall, F1, for each file.
+6. Visualize all data, to better analysis accuracy of tool created.
 
 ## Toolkits
 The following toolkits where used:
