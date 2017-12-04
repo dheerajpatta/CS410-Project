@@ -1,5 +1,6 @@
 # Team 47: Yelp Rating Analysis
-Paul Moreno and Ilean Monterrubio Jr *separate paragraph*
+Paul Moreno and Ilean Monterrubio Jr
+
 This project is the University of Illinois Urbana-Champaign CS 410 Text Informations Systems class.
 
 ## Abstract
@@ -17,9 +18,9 @@ The tool will track and differentiate the performance of customer services versu
 ## Background
 
 ## Task Definitions
-* Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
-* Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
-  * Each category will have their own Theat Background:
+1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
+   * Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
+   * Each category will have their own Theat Background:
     * Service - which is if the comment is refering to the service they recieved.
     * Goods - which is if the comment is refering to the food or any product recieved.
     * The first 50 or 100 reviews will be used to create the training data.
