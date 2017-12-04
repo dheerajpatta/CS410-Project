@@ -31,14 +31,12 @@ The tool will track and differentiate the performance of customer services versu
       * If less than .80 return to Task 3 .
 * Create sentiment analysis fucntion.
 * Run sentiment analysis on each file.
-  * Use Stars: field to compare accuracy of analysis.
+  * Use Stars field to compare accuracy of analysis.
+   * 4-5 stars means positive review.
+   * 3 stars means neutral review.
+   * 1-2 stars means negative review.
   * Find Precision, Recall, F1, for each file.
 * Visualize all data, to better analysis accuracy of tool created.
-
-## Notes (this makes no sense i know just writing my ideas)
-We want to categorize each comment into either Service or Goods. Then we want to run the sentiment analysis based on the collection of each category. After the analysis we can determine the distribution based of each category.
-
-The sentiment analysis will be done using the NLTk and the star system will used to see if the prediction of the sentiment analysis is correct, 5-4 stars will be positive and 1-2 star is negative and 3 is neutral.
 
 ## Toolkits
 The following toolkits where used:
