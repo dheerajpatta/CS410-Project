@@ -17,7 +17,7 @@ The tool will track and differentiate the performance of customer services versu
 
 ## Task definitions
 1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
-2. Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
+* Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
   * Each category will have their own Theat Background:
     * Service - which is if the comment is refering to the service they recieved.
     * Goods - which is if the comment is refering to the food or any product recieved.
