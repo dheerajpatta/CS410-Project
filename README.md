@@ -1,5 +1,5 @@
 # Team 47: Yelp Rating Analysis
-Paul Moreno and Ilean Monterrubio Jr...
+Paul Moreno and Ilean Monterrubio Jr *separate paragraph*
 This project is the University of Illinois Urbana-Champaign CS 410 Text Informations Systems class.
 
 ## Abstract
