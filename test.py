@@ -36,14 +36,14 @@ def text_process(text):
 
 yelp = pd.read_csv('yelp.csv')
 
-yelp_class = yelp[(yelp['stars'] == 1) | (yelp['stars'] == 5)]
-
 X = yelp['text']
-print(X[0])
-print ""
-print "----------------------------------------------"
-print ""
-print(text_process(X[0]))
-print ""
-print "----------------------------------------------"
-print ""
+yelp_train = X[:1000]
+train_s = []
+for i in yelp_train:
+    if i == 0:
+        train_s = text_process(yelp_train[i])
+    else:
+        train_s = train_s + text_process(yelp_train[0])
+
+train_w =nltk.FreqDist(train_s)
+print(train_w.most_common(2000))
