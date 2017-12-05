@@ -43,6 +43,8 @@ The tool will track and differentiate the performance of customer services versu
 ## Toolkits
 The following toolkits where used:
 * NLTK
+* Scipy
+* Pandas
 
 ## Conclusion
 
