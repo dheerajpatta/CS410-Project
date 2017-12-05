@@ -4,17 +4,13 @@ https://medium.com/tensorist/classifying-yelp-reviews-using-nltk-and-scikit-lear
 """
 import json
 import string
+from itertools import islice
+from collections import Counter
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import confusion_matrix, classification_report
-
 import nltk
 from nltk.corpus import stopwords
+from nltk.corpus import word wordnet
+from nltk.tokenize import word_tokenize
 
 
 def text_process(text):
@@ -31,19 +27,31 @@ def text_process(text):
     nopunc = ''.join(nopunc)
 
     # Now just remove any stopwords
-    return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+    #return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+    return [word for word in nopunc.split() if word.lower() and
+                   word.decode('utf8') not in stopwords.words('english')]
+
 
 
 yelp = pd.read_csv('yelp.csv')
-
+o = open('token.txt', 'w+')
+oo = open('popular.txt', 'w+')
 X = yelp['text']
-yelp_train = X[:1000]
-train_s = []
+yelp_train = X[:500]
+train_s = ""
+print stopwords.words('english')
+#print text_process(yelp_train[0]) + text_process(yelp_train[1]) + text_process(yelp_train[2])
 for i in yelp_train:
-    if i == 0:
-        train_s = text_process(yelp_train[i])
-    else:
-        train_s = train_s + text_process(yelp_train[0])
+    train_s = train_s + i
 
-train_w =nltk.FreqDist(train_s)
-print(train_w.most_common(2000))
+train_tok = text_process(train_s)
+train_w = Counter(train_tok)
+for word in train_s:
+    o.write(word)
+o.close()
+
+top = train_w.most_common(100)
+"""for word in top:
+    oo.write(word)
+oo.close()"""
+#print(top)
