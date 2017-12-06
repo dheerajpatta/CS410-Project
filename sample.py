@@ -25,5 +25,6 @@ def find_features(document):
     return features
 
 #print((find_features(movie_reviews.words('neg/cv000_29416.txt'))))
+print documents.head()
 featuresets = [(find_features(rev), category) for (rev, category) in documents]
-print featuresets[300]
+#print featuresets[300]

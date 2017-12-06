@@ -50,3 +50,6 @@ top = train_w.most_common()
 with open('popular.txt', 'w') as fp:
     fp.write('\n'.join('%s %s' % x for x in top))
 fp.close()
+with open('popular1.txt', 'w') as fp:
+    fp.write('\n'.join(x[0] for x in top))
+fp.close()

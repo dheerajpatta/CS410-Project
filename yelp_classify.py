@@ -4,12 +4,16 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+import time
 import string
 import random
 from itertools import islice
 from collections import Counter
 import pandas as pd
 import nltk
+from nltk.classify.scikitlearn import SklearnClassifier
+from sklearn.naive_bayes import MultinomialNB,BernoulliNB
+import pickle
 from nltk.stem import PorterStemmer
 
 def lower_tokenizer(text):
@@ -32,29 +36,43 @@ def featuresToFind(doc, gsWords):
         features[w] = (w in words)
     return features
 
+def tokList(doc):
+    toks = []
+    cnt = 0
+    for d in doc:
+        cnt = cnt +1
+        dd = lower_tokenizer(d)
+        toks.append(dd)
+    return toks
 
 #reading dataset
 yelp = pd.read_csv('yelp-csv.csv')
+x1 = yelp["text"]
+xx = tokList(x1[:1000])
+yy = yelp["topic"]
 
-#only interested in the 'text' since it the comments
-X = (yelp['text'],yelp['user topic'])
+trainX = zip(xx,yy)
 
-#grabbing the first 1k comments
-yelp_= X[:1000]
-yelp_train = yelp[:50]
-yelp_test = yelp[50:]
 
 # loading training data
 goods_tt = [word.strip('\n') for word in open('goods.txt').readlines()]
 service_tt = [word.strip('\n') for word in open('service.txt').readlines()]
 tt =goods_tt + service_tt
 
-t = [(goods_tt, 'goods') + (service_tt, 'service')]
-random.shuffle(t)
-#print t
+fullDist = [word.strip('\n') for word in open('popular1.txt').readlines()]
+fullDist_ = fullDist[:500]
 
-"""randomDoc = lower_tokenizer(yelp_corpus[1500])
-print((featuresToFind(randomDoc,tt)))
-"""
 
-#classifier = nltk.NaiveBayesClassifier.train(tt)
+featuresets = [(featuresToFind(rev,fullDist_), category) for (rev, category) in trainX]
+
+
+yelp_train = featuresets[:50]
+yelp_test = featuresets[50:100]
+
+classifier = nltk.NaiveBayesClassifier.train(yelp_train)
+print("Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
+classifier.show_most_informative_features(15)
+
+MNB_classifier = SklearnClassifier(MultinomialNB())
+MNB_classifier.train(yelp_train)
+print("MultinomialNB accuracy percent:",nltk.classify.accuracy(MNB_classifier, yelp_test))
