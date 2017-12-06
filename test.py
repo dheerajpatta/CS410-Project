@@ -44,7 +44,7 @@ train_tok = lower_tokenizer(train_s)
 
 #Counting all the words
 train_w = Counter(train_tok)
-top = train_w.most_common(300)
+top = train_w.most_common()
 with open('popular.txt', 'w') as fp:
     fp.write('\n'.join('%s %s' % x for x in top))
 fp.close()
