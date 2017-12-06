@@ -20,21 +20,21 @@ The tool will track and differentiate the performance of customer services versu
 ## Task Definitions
 1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
    * Topic mining, finding the words commonly used to describe service and goods to create the training data.
-     * This part was challenging, getting the data all cleaned using NLTK. First challenge was tokenizing the first 1000 comments. Second was lowercasing all the words to better pull them together for removing all the stopwords. We found that the built in stopwords was not as complete as the one used for the machine problems done in class. Last we stemmed using the PorterStemmer built in to NLTK that worked as advertise.
+     * This part was challenging, getting the data all cleaned using NLTK. First challenge was tokenizing the first 1000 comments. Second was lowercasing all the words to better pull them together for removing all the stop words. We found that the built in stop words was not as complete as the one used for the machine problems done in class. Last we stemmed using the PorterStemmer built in to NLTK that worked as advertise.
    * Each category will have their own Theat Background:
-     * Service - which is if the comment is refering to the service they recieved.
+     * Service - which is if the comment is referring to the service they received.
        * File created.
-     * Goods - which is if the comment is refering to the food or any product recieved.
+     * Goods - which is if the comment is referring to the food or any product received.
        * File created.
      * The first 1000 reviews will be used to create the training data.
-2. Create Topic Modelling function.
-3. Topic model using training data, each traning data will be run independently.
+2. Create Topic Modeling function.
+3. Topic model using training data, each training data will be run independently.
    * Create new files:
      * service.csv - This file will collected all comments related to service, upper limit of 500 comments.
-     * goods.csv - This file will collected all comments related to good recieved, upper limit of 500 comments.
+     * goods.csv - This file will collected all comments related to good received, upper limit of 500 comments.
      * Find Precision, Recall, F1, for each file.
        * If less than .80 return to Task 3 .
-4. Create sentiment analysis fucntion.
+4. Create sentiment analysis function.
 5. Run sentiment analysis on each file.
    * Use Stars to compare accuracy of analysis.
     * 4-5 stars means positive review.
@@ -46,7 +46,6 @@ The tool will track and differentiate the performance of customer services versu
 ## Toolkits
 The following toolkits where used:
 * NLTK
-* Scipy
 * Pandas
 
 ## Conclusion
