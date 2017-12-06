@@ -19,11 +19,14 @@ The tool will track and differentiate the performance of customer services versu
 
 ## Task Definitions
 1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
-   * Topic mining, finding the commonly used to describe to create the training data, which is Theta_B.
+   * Topic mining, finding the words commonly used to describe service and goods to create the training data.
+     * This part was challenging, getting the data all cleaned using NLTK. First challenge was tokenizing the first 1000 comments. Second was lowercasing all the words to better pull them together for removing all the stopwords. We found that the built in stopwords was not as complete as the one used for the machine problems done in class. Last we stemmed using the PorterStemmer built in to NLTK that worked as advertise.
    * Each category will have their own Theat Background:
      * Service - which is if the comment is refering to the service they recieved.
+       * File created.
      * Goods - which is if the comment is refering to the food or any product recieved.
-     * The first 50 or 100 reviews will be used to create the training data.
+       * File created.
+     * The first 1000 reviews will be used to create the training data.
 2. Create Topic Modelling function.
 3. Topic model using training data, each traning data will be run independently.
    * Create new files:
