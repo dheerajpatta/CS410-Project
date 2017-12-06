@@ -5,6 +5,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 import string
+import random
 from itertools import islice
 from collections import Counter
 import pandas as pd
@@ -24,16 +25,36 @@ def lower_tokenizer(text):
     final_w = [ps.stem(t) for t in content]
     return final_w
 
-#reading dataset
-yelp = pd.read_csv('yelp.csv')
+def featuresToFind(doc, gsWords):
+    words = set(doc)
+    features = {}
+    for w in gsWords:
+        features[w] = (w in words)
+    return features
 
-# loading training data
-t = [word.strip('\n') for word in open('goods.txt').readlines()]
-training = set([({word: (word in t for word in t}, x[1]) for x in train])
+
+#reading dataset
+yelp = pd.read_csv('yelp-csv.csv')
 
 #only interested in the 'text' since it the comments
-X = yelp['text']
+X = (yelp['text'],yelp['user topic'])
 
 #grabbing the first 1k comments
-yelp_corpus = X[1000:2000]
-classifier = nltk.NaiveBayesClassifier.train(training)
+yelp_= X[:1000]
+yelp_train = yelp[:50]
+yelp_test = yelp[50:]
+
+# loading training data
+goods_tt = [word.strip('\n') for word in open('goods.txt').readlines()]
+service_tt = [word.strip('\n') for word in open('service.txt').readlines()]
+tt =goods_tt + service_tt
+
+t = [(goods_tt, 'goods') + (service_tt, 'service')]
+random.shuffle(t)
+#print t
+
+"""randomDoc = lower_tokenizer(yelp_corpus[1500])
+print((featuresToFind(randomDoc,tt)))
+"""
+
+#classifier = nltk.NaiveBayesClassifier.train(tt)

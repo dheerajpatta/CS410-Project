@@ -75,7 +75,7 @@ substitut
 promptli
 internet
 fundrais
-to-go 
+to-go
 togo
 patient
 waitstaff
@@ -91,3 +91,5 @@ disappear
 free
 music
 hotel
+motel
+manager

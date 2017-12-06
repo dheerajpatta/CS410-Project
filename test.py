@@ -27,6 +27,8 @@ def lower_tokenizer(text):
 
 #reading dataset
 yelp = pd.read_csv('yelp.csv')
+yelp['user topic'] = ' '
+yelp.to_csv('yelp.csv')
 
 #only interested in the 'text' since it the comments
 X = yelp['text']
