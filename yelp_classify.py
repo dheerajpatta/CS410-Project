@@ -11,8 +11,11 @@ from itertools import islice
 from collections import Counter
 import pandas as pd
 import nltk
+import nltk.metrics
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.naive_bayes import MultinomialNB,BernoulliNB
+from sklearn.linear_model import LogisticRegression,SGDClassifier
+from sklearn.svm import SVC, LinearSVC, NuSVC
 import pickle
 from nltk.stem import PorterStemmer
 
@@ -51,8 +54,7 @@ x1 = yelp["text"]
 xx = tokList(x1[:1000])
 yy = yelp["topic"]
 
-trainX = zip(xx,yy)
-
+trainX = zip(xx,yy[:1000])
 
 # loading training data
 goods_tt = [word.strip('\n') for word in open('goods.txt').readlines()]
@@ -62,17 +64,46 @@ tt =goods_tt + service_tt
 fullDist = [word.strip('\n') for word in open('popular1.txt').readlines()]
 fullDist_ = fullDist[:500]
 
-
 featuresets = [(featuresToFind(rev,fullDist_), category) for (rev, category) in trainX]
 
-
+#random.shuffle(featuresets[:100])
 yelp_train = featuresets[:50]
 yelp_test = featuresets[50:100]
-
+"""
 classifier = nltk.NaiveBayesClassifier.train(yelp_train)
-print("Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
-classifier.show_most_informative_features(15)
+#print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
+#print("Precision:", (nltk.classify.precision(classifier, yelp_test)))
+#classifier.show_most_informative_features(20)
 
-MNB_classifier = SklearnClassifier(MultinomialNB())
-MNB_classifier.train(yelp_train)
-print("MultinomialNB accuracy percent:",nltk.classify.accuracy(MNB_classifier, yelp_test))
+LinearSVC_classifier = SklearnClassifier(LinearSVC())
+LinearSVC_classifier.train(yelp_train)
+print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
+"""
+#sentiment analysis
+print "\n", "Sentiment Analysis: \n"
+
+
+sStars = yelp['stars']
+
+ssStars = []
+for s in sStars:
+    if s == 5 or s == 4:
+        ssStars.append("pos")
+    elif s == 3:
+        ssStars.append("neu")
+    elif s == 2 or s == 1:
+        ssStars.append("neg")
+
+trainStars = zip(xx, ssStars[:1000])
+
+#print trainStars[999:1000]
+Sfeaturesets = [(featuresToFind(rev,fullDist_), category) for (rev, category) in trainStars]
+yelpS_train = Sfeaturesets[:500]
+yelpS_test = Sfeaturesets[500:1000]
+
+classifier = nltk.NaiveBayesClassifier.train(yelpS_train)
+print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelpS_test)))
+
+LinearSVC_classifier = SklearnClassifier(LinearSVC())
+LinearSVC_classifier.train(yelp_train)
+print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
