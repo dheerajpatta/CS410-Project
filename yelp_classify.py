@@ -62,23 +62,23 @@ service_tt = [word.strip('\n') for word in open('service.txt').readlines()]
 tt =goods_tt + service_tt
 
 fullDist = [word.strip('\n') for word in open('popular1.txt').readlines()]
-fullDist_ = fullDist[:500]
+fullDist_ = fullDist[:1000]
 
 featuresets = [(featuresToFind(rev,fullDist_), category) for (rev, category) in trainX]
 
 #random.shuffle(featuresets[:100])
-yelp_train = featuresets[:50]
-yelp_test = featuresets[50:100]
-"""
+yelp_train = featuresets[:225]
+yelp_test = featuresets[225:400]
+
 classifier = nltk.NaiveBayesClassifier.train(yelp_train)
-#print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
+print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
 #print("Precision:", (nltk.classify.precision(classifier, yelp_test)))
 #classifier.show_most_informative_features(20)
 
 LinearSVC_classifier = SklearnClassifier(LinearSVC())
 LinearSVC_classifier.train(yelp_train)
 print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
-"""
+
 #sentiment analysis
 print "\n", "Sentiment Analysis: \n"
 
