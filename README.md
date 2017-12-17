@@ -18,7 +18,7 @@ The tool will track and differentiate the performance of customer services versu
 ## Background
 
 ## Task Definitions
-1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV).
+1. Gather data from Yelp Open Dataset, or other source. With the data collected, if data file is in JSON format it will be converted to comma delimited file (CSV). Downloaded the data set from [here](https://www.dropbox.com/s/wc6rzl1a2os721d/yelp.csv?dl=0).
    * Topic mining, finding the words commonly used to describe service and goods to create the training data.
      * This part was challenging, getting the data all cleaned using NLTK. First challenge was tokenizing the first 1000 comments. Second was lowercasing all the words to better pull them together for removing all the stop words. We found that the built in stop words was not as complete as the one used for the machine problems done in class. Last we stemmed using the PorterStemmer built in to NLTK that worked as advertise.
    * Each category will have their own Theat Background:
@@ -33,7 +33,7 @@ The tool will track and differentiate the performance of customer services versu
      * service.csv - This file will collected all comments related to service, upper limit of 500 comments.
      * goods.csv - This file will collected all comments related to good received, upper limit of 500 comments.
      * Find Precision, Recall, F1, for each file.
-       * If less than .80 return to Task 3 .
+       * If less than .60 return to Task 3.
 4. Create sentiment analysis function.
 5. Run sentiment analysis on each file.
    * Use Stars to compare accuracy of analysis.

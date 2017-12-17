@@ -1,3 +1,4 @@
+# tutorial to see how NLTK works
 import nltk
 import random
 from nltk.corpus import movie_reviews
