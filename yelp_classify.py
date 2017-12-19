@@ -1,21 +1,25 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 # had some problems with ASCII and UTF-8 so did the following 3 line to fix it
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-
 import time
 import string
 import random
+import collections
 from itertools import islice
 from collections import Counter
 import pandas as pd
+import numpy as np
 import nltk
-import nltk.metrics
+from nltk.metrics import precision, recall, f_measure
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.naive_bayes import MultinomialNB,BernoulliNB
 from sklearn.linear_model import LogisticRegression,SGDClassifier
 from sklearn.svm import SVC, LinearSVC, NuSVC
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib import style
 import pickle
 from nltk.stem import PorterStemmer
 
@@ -48,18 +52,66 @@ def tokList(doc):
         toks.append(dd)
     return toks
 
+def graphThings(table,string):
+    graphServ = [0,0,0,0,0]
+    graphGood = [0,0,0,0,0]
+    for i,t in enumerate(table):
+        if t[3] == 5:
+            if t[2] =='goods':
+                graphGood[4] += 1
+            elif t[2] =='service':
+                graphServ[4] += 1
+        if t[3] == 4:
+            if t[2] =='goods':
+                graphGood[3] += 1
+            elif t[2] =='service':
+                graphServ[3] += 1
+        if t[3] == 3:
+            if t[2] =='goods':
+                graphGood[2] += 1
+            elif t[2] =='service':
+                graphServ[2] += 1
+        if t[3] == 2:
+            if t[2] =='goods':
+                graphGood[1] += 1
+            elif t[2] =='service':
+                graphServ[1] += 1
+        if t[3] == 1:
+            if t[2] =='goods':
+                graphGood[0] += 1
+            elif t[2] =='service':
+                graphServ[0] += 1
+    style.use("ggplot")
+    fig, ax = plt.subplots()
+    index = np.arange(5)
+    bar_width = 0.35
+    opacity = 0.4
+
+    rectGoods = ax.bar(index,graphGood, bar_width, alpha=opacity,color='b', label="Goods")
+    rectServ = ax.bar(index + bar_width,graphServ, bar_width, alpha=opacity,color='r', label="Service")
+
+    ax.set_xlabel('Stars')
+    ax.set_ylabel('Number of Comments')
+    ax.set_xticks(index + bar_width)
+    ax.set_xticklabels(('1','2','3','4','5'))
+    ax.set_title('Yelp Review Classification')
+    ax.legend(bbox_to_anchor=(0.5,1),loc=0,borderaxespad=0.)
+    #ax.legend()
+    #fig.tight_layout()
+    plt.rcParams
+    plt.savefig(string)
+
+
+
 #reading dataset
 yelp = pd.read_csv('yelp-csv.csv')
 x1 = yelp["text"]
 xx = tokList(x1[:1000])
 yy = yelp["topic"]
-
+sStars = yelp['stars']
 trainX = zip(xx,yy[:1000])
 
 # loading training data
-goods_tt = [word.strip('\n') for word in open('goods.txt').readlines()]
-service_tt = [word.strip('\n') for word in open('service.txt').readlines()]
-tt =goods_tt + service_tt
 
 fullDist = [word.strip('\n') for word in open('popular1.txt').readlines()]
 fullDist_ = fullDist[:1000]
@@ -71,19 +123,49 @@ yelp_train = featuresets[:225]
 yelp_test = featuresets[225:400]
 
 classifier = nltk.NaiveBayesClassifier.train(yelp_train)
+refsets = collections.defaultdict(set)
+testsets = collections.defaultdict(set)
+
+csObserved = []
+for i, (feats, label) in enumerate(featuresets):
+    refsets[label].add(i)
+    observed = classifier.classify(feats)
+    csObserved.append(observed)
+    testsets[observed].add(i)
+
+dataO = trainX[:400]
+dataOO = zip(x1[:400],yy[:400],csObserved,sStars[:400])
+
 print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelp_test)))
-#print("Precision:", (nltk.classify.precision(classifier, yelp_test)))
-#classifier.show_most_informative_features(20)
+print("Precision of goods:", (precision(refsets['goods'], testsets['goods'])))
+print("Recall of goods:", (recall(refsets['goods'], testsets['goods'])))
+print("Fmeasure of goods:", (f_measure(refsets['goods'], testsets['goods'])))
+print("Precision of service:", (precision(refsets['service'], testsets['service'])))
+print("Recall of service:", (recall(refsets['service'], testsets['service'])))
+print("Fmeasure of service:", (f_measure(refsets['service'], testsets['service'])))
 
 LinearSVC_classifier = SklearnClassifier(LinearSVC())
 LinearSVC_classifier.train(yelp_train)
-print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
+cssObserved = []
+for i, (feats, label) in enumerate(featuresets):
+    refsets[label].add(i)
+    observed = LinearSVC_classifier.classify(feats)
+    cssObserved.append(observed)
+    testsets[observed].add(i)
+dataOO0 = zip(x1[:400],yy[:400],cssObserved,sStars[:400])
 
+print ""
+print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
+print("Precision of goods:", (precision(refsets['goods'], testsets['goods'])))
+print("Recall of goods:", (recall(refsets['goods'], testsets['goods'])))
+print("Fmeasure of goods:", (f_measure(refsets['goods'], testsets['goods'])))
+print("Precision of service:", (precision(refsets['service'], testsets['service'])))
+print("Recall of service:", (recall(refsets['service'], testsets['service'])))
+print("Fmeasure of service:", (f_measure(refsets['service'], testsets['service'])))
+
+"""
 #sentiment analysis
 print "\n", "Sentiment Analysis: \n"
-
-
-sStars = yelp['stars']
 
 ssStars = []
 for s in sStars:
@@ -107,3 +189,7 @@ print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, ye
 LinearSVC_classifier = SklearnClassifier(LinearSVC())
 LinearSVC_classifier.train(yelp_train)
 print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
+"""
+
+graphThings(dataOO,"naivebayes.png")
+graphThings(dataOO0,"LinearSVC.png")
