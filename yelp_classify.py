@@ -14,13 +14,10 @@ import numpy as np
 import nltk
 from nltk.metrics import precision, recall, f_measure
 from nltk.classify.scikitlearn import SklearnClassifier
-from sklearn.naive_bayes import MultinomialNB,BernoulliNB
-from sklearn.linear_model import LogisticRegression,SGDClassifier
-from sklearn.svm import SVC, LinearSVC, NuSVC
+from sklearn.svm import LinearSVC
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
-import pickle
 from nltk.stem import PorterStemmer
 
 def lower_tokenizer(text):

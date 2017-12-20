@@ -520,9 +520,9 @@ sorri 22
 reserv 22
 beat 22
 rang 22
+tip 22
 serious 22
 color 22
-tip 22
 bland 22
 melt 21
 citi 21
@@ -600,7 +600,6 @@ section 19
 sell 19
 face 19
 movi 19
-lucki 19
 smoke 19
 middl 19
 margarita 19
@@ -619,6 +618,7 @@ quich 19
 weird 19
 birthday 19
 practic 19
+lucki 19
 hold 18
 fairli 18
 refil 18
@@ -920,7 +920,6 @@ requir 11
 learn 11
 w 11
 caramel 11
-river 11
 bell 11
 bother 11
 clearli 11
@@ -971,6 +970,7 @@ version 11
 chose 11
 cozi 11
 tap 11
+river 11
 overpr 11
 china 10
 45 10
@@ -986,12 +986,12 @@ hostess 10
 send 10
 sens 10
 odd 10
+despit 10
 process 10
 seriou 10
 avoid 10
 attitud 10
 greet 10
-despit 10
 provid 10
 upper 10
 regret 10
@@ -1220,6 +1220,7 @@ unusu 8
 ramen 8
 desir 8
 quesadilla 8
+b 8
 latt 8
 cater 8
 fortun 8
@@ -1250,7 +1251,6 @@ bigger 8
 feet 8
 comfi 8
 kind 8
-b 8
 flight 8
 cheer 8
 rainbow 8
@@ -1276,6 +1276,7 @@ ambienc 7
 ive 7
 cilantro 7
 fianc 7
+leg 7
 scallop 7
 acknowledg 7
 butteri 7
@@ -1284,7 +1285,6 @@ tart 7
 recip 7
 video 7
 bird 7
-leg 7
 popcorn 7
 commun 7
 classi 7
@@ -1427,7 +1427,6 @@ act 6
 overpow 6
 al 6
 tight 6
-introduc 6
 hash 6
 challeng 6
 scott 6
@@ -1555,6 +1554,7 @@ biggest 6
 pineappl 6
 hide 6
 path 6
+introduc 6
 downsid 6
 snow 6
 flow 6
@@ -1618,6 +1618,7 @@ mmmm 5
 restur 5
 gold 5
 factor 5
+cri 5
 schedul 5
 bf 5
 splurg 5
@@ -1662,6 +1663,7 @@ test 5
 grape 5
 hannah 5
 soooo 5
+prove 5
 multipl 5
 cole 5
 non 5
@@ -1821,12 +1823,10 @@ remodel 5
 solo 5
 p. 5
 squeez 5
-prove 5
 mustard 5
 tax 5
 tab 5
 upscal 5
-cri 5
 boil 5
 pipe 5
 determin 5
@@ -2277,7 +2277,6 @@ sol 3
 sunset 3
 intend 3
 chimichanga 3
-fifth 3
 boost 3
 meld 3
 vega 3
@@ -2310,6 +2309,7 @@ cpk 3
 merchandis 3
 tail 3
 midwest 3
+norm 3
 vic 3
 plane 3
 pant 3
@@ -2366,7 +2366,6 @@ cring 3
 scorch 3
 embarrass 3
 spill 3
-lush 3
 wet 3
 brew 3
 rough 3
@@ -2374,9 +2373,11 @@ footbal 3
 nois 3
 jar 3
 intrigu 3
+styrofoam 3
 courtyard 3
 ck 3
 drank 3
+lush 3
 competit 3
 broccoli 3
 wee 3
@@ -2444,6 +2445,7 @@ baja 3
 slam 3
 america 3
 tooth 3
+fifth 3
 stair 3
 5:00pm 3
 marti 3
@@ -2580,10 +2582,10 @@ dice 3
 label 3
 august 3
 trader 3
+tour 3
 wake 3
 genuin 3
 protein 3
-tour 3
 pan 3
 chorizo 3
 mcdonald 3
@@ -2676,7 +2678,6 @@ orecchiett 3
 risk 3
 barbecu 3
 christ 3
-norm 3
 carmel 3
 overheard 3
 attract 3
@@ -2684,7 +2685,6 @@ nordi 3
 thoma 3
 2.95 3
 plenti 3
-styrofoam 3
 puttanesca 3
 slider 3
 habit 3
@@ -3266,7 +3266,6 @@ taiwan 2
 caraf 2
 eel 2
 duluth 2
-fresca 2
 simmer 2
 garlicki 2
 goooood 2
@@ -3695,7 +3694,6 @@ encor 2
 reli 2
 brightli 2
 furi 2
-parrothead 2
 til 2
 tie 2
 bullet 2
@@ -3751,6 +3749,7 @@ helmet 2
 10:30 2
 admir 2
 model 2
+parrothead 2
 halfway 2
 rose 2
 spinato 2
@@ -3792,6 +3791,7 @@ dang 2
 .see 2
 marbl 2
 dedic 2
+fresca 2
 unsur 2
 fond 2
 financ 2
@@ -4022,7 +4022,6 @@ marvel 1
 explan 1
 hungari 1
 cheapli 1
-speech 1
 junkyard 1
 rock-hard 1
 busy 1
@@ -4188,6 +4187,7 @@ choppino 1
 headset 1
 started.aft 1
 intestin 1
+cheesteak 1
 'hi 1
 ufc 1
 modif 1
@@ -4243,6 +4243,7 @@ yearn 1
 dye 1
 cripsi 1
 expier 1
+rude.. 1
 cleanest 1
 tort 1
 ten-mil 1
@@ -4279,7 +4280,7 @@ mignon 1
 barbacoa 1
 audac 1
 boulevard 1
-wrath 1
+pizzawhat 1
 future.i 1
 must-tri 1
 popcorn/candi 1
@@ -4418,7 +4419,6 @@ nice.3/5 1
 bad-i 1
 thailand 1
 slighti 1
-lower-r 1
 marshmallow 1
 wade 1
 rossi 1
@@ -4624,9 +4624,9 @@ see 1
 sea 1
 allig 1
 meal.thi 1
+toto 1
 zucca 1
 tobi 1
-anyhoo.i 1
 milder 1
 pirat 1
 last 1
@@ -5268,7 +5268,6 @@ crustwednesday 1
 felafel 1
 warmth 1
 partnership 1
-2.99 1
 hap 1
 fest 1
 gracious 1
@@ -5385,6 +5384,7 @@ brave 1
 cargo 1
 indiffer 1
 pleasingli 1
+lower-r 1
 rubberi 1
 janessa 1
 griddl 1
@@ -5396,7 +5396,6 @@ stingi 1
 papago 1
 mobil 1
 furniture.. 1
-driest 1
 laugh.i 1
 oreo 1
 anise/licoric 1
@@ -5507,7 +5506,6 @@ rendit 1
 30-40 1
 speakeasi 1
 2-4-1 1
-cheesteak 1
 fifti 1
 comparison.dvap 1
 joli 1
@@ -5748,6 +5746,7 @@ latest 1
 velveta 1
 etc.i 1
 sheik 1
+speech 1
 verison 1
 'chip 1
 flash-fri 1
@@ -5848,6 +5847,7 @@ you.today 1
 3chicken 1
 urgenc 1
 creation 1
+wildlif 1
 yolk 1
 isnt 1
 exception.disclaim 1
@@ -6310,7 +6310,7 @@ everyone.i 1
 inflat 1
 do.i 1
 cutesi 1
-pizzawhat 1
+wrath 1
 4oz 1
 sunshin 1
 fleck 1
@@ -6692,7 +6692,6 @@ magna 1
 je 1
 chelsea 1
 awesome.kabuki 1
-audienc 1
 waayi 1
 tum 1
 cancer 1
@@ -6714,6 +6713,7 @@ pat 1
 harsh 1
 judge.if 1
 sit.i 1
+audienc 1
 pac 1
 5:52 1
 5:50 1
@@ -6793,6 +6793,7 @@ capres 1
 landfil 1
 forbidden 1
 allergi 1
+anyhoo.i 1
 bagels.nic 1
 up-scal 1
 godfath 1
@@ -6899,7 +6900,6 @@ mistakenli 1
 burp 1
 statement 1
 mama 1
-free.tri 1
 contrari 1
 fold 1
 entertainment/performances.i 1
@@ -7071,7 +7071,7 @@ different.w 1
 tied.. 1
 happens.a 1
 kickin 1
-toto 1
+free.tri 1
 becas 1
 that.cash 1
 granular 1
@@ -7522,6 +7522,7 @@ getcha 1
 matchstick 1
 rider 1
 glom 1
+2.99 1
 peppercorn 1
 coin 1
 everyth 1
@@ -7607,7 +7608,6 @@ cheuvront 1
 laptop 1
 something.i 1
 enlighten 1
-leinart 1
 expos 1
 stool-w 1
 endovenera 1
@@ -7661,7 +7661,7 @@ his/her 1
 smithwick 1
 uncoop 1
 peruvian 1
-rude.. 1
+leinart 1
 .all 1
 assembl 1
 nj 1
@@ -8142,7 +8142,6 @@ me.. 1
 window- 1
 eff 1
 gill 1
-wildlif 1
 7- 1
 splay 1
 remodl 1
@@ -8266,6 +8265,7 @@ tinker 1
 elixir 1
 negress 1
 conspir 1
+driest 1
 lifeless 1
 .tri 1
 infuri 1
@@ -8363,7 +8363,7 @@ bars/club 1
 fer 1
 bottomless 1
 phoenix.th 1
-throne 1
+chowmein 1
 clever 1
 short-par 1
 tail.it 1
@@ -8570,7 +8570,7 @@ mitt 1
 obes 1
 expected.i 1
 kitsch 1
-chowmein 1
+throne 1
 smashfri 1
 liklihood 1
 futurist 1

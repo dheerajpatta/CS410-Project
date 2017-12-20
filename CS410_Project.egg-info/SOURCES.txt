@@ -1,0 +1,5 @@
+CS410_Project.egg-info/PKG-INFO
+CS410_Project.egg-info/SOURCES.txt
+CS410_Project.egg-info/dependency_links.txt
+CS410_Project.egg-info/requires.txt
+CS410_Project.egg-info/top_level.txt
