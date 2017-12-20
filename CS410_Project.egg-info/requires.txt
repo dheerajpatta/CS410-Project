@@ -4,4 +4,3 @@ nltk
 matplotlib
 pandas
 scipy
-python-tk

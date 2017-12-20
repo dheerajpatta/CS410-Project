@@ -10,7 +10,6 @@ requires = [
         'matplotlib',
         'pandas',
         'scipy',
-        'python-tk',
         ]
 
 setup(
