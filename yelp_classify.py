@@ -98,7 +98,9 @@ def graphThings(table,string):
     plt.rcParams
     plt.savefig(string)
 
+print "yelp_classify.py::starting"
 
+print "\n", "Context Classification: \n"
 
 #reading dataset
 yelp = pd.read_csv('yelp-csv.csv')
@@ -218,3 +220,5 @@ print("Fmeasure of neu:", (f_measure(refsetsS['neu'], testsetsS['neu'])))
 print("Precision of neg:", (precision(refsetsS['neg'], testsetsS['neg'])))
 print("Recall of neg:", (recall(refsetsS['neg'], testsetsS['neg'])))
 print("Fmeasure of neg:", (f_measure(refsetsS['neg'], testsetsS['neg'])))
+print ""
+print "yelp_classify.py::completed"

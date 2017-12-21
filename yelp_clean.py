@@ -25,10 +25,13 @@ def lower_tokenizer(text):
     final_w = [ps.stem(t) for t in content]
     return final_w
 
+
+print "yelp_clean.py::starting"
 #reading dataset
 yelp = pd.read_csv('yelp.csv')
 yelp['user topic'] = ' '
 yelp.to_csv('yelp.csv')
+
 
 #only interested in the 'text' since it the comments
 X = yelp['text']
@@ -53,3 +56,4 @@ fp.close()
 with open('popular1.txt', 'w') as fp:
     fp.write('\n'.join(x[0] for x in top))
 fp.close()
+print "yelp_clean.py::complete"
