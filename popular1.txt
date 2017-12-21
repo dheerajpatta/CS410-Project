@@ -520,9 +520,9 @@ sorri
 reserv
 beat
 rang
-tip
 serious
 color
+tip
 bland
 melt
 citi
@@ -600,6 +600,7 @@ section
 sell
 face
 movi
+lucki
 smoke
 middl
 margarita
@@ -618,7 +619,6 @@ quich
 weird
 birthday
 practic
-lucki
 hold
 fairli
 refil
@@ -920,6 +920,7 @@ requir
 learn
 w
 caramel
+river
 bell
 bother
 clearli
@@ -970,7 +971,6 @@ version
 chose
 cozi
 tap
-river
 overpr
 china
 45
@@ -986,12 +986,12 @@ hostess
 send
 sens
 odd
-despit
 process
 seriou
 avoid
 attitud
 greet
+despit
 provid
 upper
 regret
@@ -1220,7 +1220,6 @@ unusu
 ramen
 desir
 quesadilla
-b
 latt
 cater
 fortun
@@ -1251,6 +1250,7 @@ bigger
 feet
 comfi
 kind
+b
 flight
 cheer
 rainbow
@@ -1276,7 +1276,6 @@ ambienc
 ive
 cilantro
 fianc
-leg
 scallop
 acknowledg
 butteri
@@ -1285,6 +1284,7 @@ tart
 recip
 video
 bird
+leg
 popcorn
 commun
 classi
@@ -1427,6 +1427,7 @@ act
 overpow
 al
 tight
+introduc
 hash
 challeng
 scott
@@ -1554,7 +1555,6 @@ biggest
 pineappl
 hide
 path
-introduc
 downsid
 snow
 flow
@@ -1618,7 +1618,6 @@ mmmm
 restur
 gold
 factor
-cri
 schedul
 bf
 splurg
@@ -1663,7 +1662,6 @@ test
 grape
 hannah
 soooo
-prove
 multipl
 cole
 non
@@ -1823,10 +1821,12 @@ remodel
 solo
 p.
 squeez
+prove
 mustard
 tax
 tab
 upscal
+cri
 boil
 pipe
 determin
@@ -2277,6 +2277,7 @@ sol
 sunset
 intend
 chimichanga
+fifth
 boost
 meld
 vega
@@ -2309,7 +2310,6 @@ cpk
 merchandis
 tail
 midwest
-norm
 vic
 plane
 pant
@@ -2366,6 +2366,7 @@ cring
 scorch
 embarrass
 spill
+lush
 wet
 brew
 rough
@@ -2373,11 +2374,9 @@ footbal
 nois
 jar
 intrigu
-styrofoam
 courtyard
 ck
 drank
-lush
 competit
 broccoli
 wee
@@ -2445,7 +2444,6 @@ baja
 slam
 america
 tooth
-fifth
 stair
 5:00pm
 marti
@@ -2582,10 +2580,10 @@ dice
 label
 august
 trader
-tour
 wake
 genuin
 protein
+tour
 pan
 chorizo
 mcdonald
@@ -2678,6 +2676,7 @@ orecchiett
 risk
 barbecu
 christ
+norm
 carmel
 overheard
 attract
@@ -2685,6 +2684,7 @@ nordi
 thoma
 2.95
 plenti
+styrofoam
 puttanesca
 slider
 habit
@@ -3266,6 +3266,7 @@ taiwan
 caraf
 eel
 duluth
+fresca
 simmer
 garlicki
 goooood
@@ -3694,6 +3695,7 @@ encor
 reli
 brightli
 furi
+parrothead
 til
 tie
 bullet
@@ -3749,7 +3751,6 @@ helmet
 10:30
 admir
 model
-parrothead
 halfway
 rose
 spinato
@@ -3791,7 +3792,6 @@ dang
 .see
 marbl
 dedic
-fresca
 unsur
 fond
 financ
@@ -4022,6 +4022,7 @@ marvel
 explan
 hungari
 cheapli
+speech
 junkyard
 rock-hard
 busy
@@ -4187,7 +4188,6 @@ choppino
 headset
 started.aft
 intestin
-cheesteak
 'hi
 ufc
 modif
@@ -4243,7 +4243,6 @@ yearn
 dye
 cripsi
 expier
-rude..
 cleanest
 tort
 ten-mil
@@ -4280,7 +4279,7 @@ mignon
 barbacoa
 audac
 boulevard
-pizzawhat
+wrath
 future.i
 must-tri
 popcorn/candi
@@ -4419,6 +4418,7 @@ nice.3/5
 bad-i
 thailand
 slighti
+lower-r
 marshmallow
 wade
 rossi
@@ -4624,9 +4624,9 @@ see
 sea
 allig
 meal.thi
-toto
 zucca
 tobi
+anyhoo.i
 milder
 pirat
 last
@@ -5268,6 +5268,7 @@ crustwednesday
 felafel
 warmth
 partnership
+2.99
 hap
 fest
 gracious
@@ -5384,7 +5385,6 @@ brave
 cargo
 indiffer
 pleasingli
-lower-r
 rubberi
 janessa
 griddl
@@ -5396,6 +5396,7 @@ stingi
 papago
 mobil
 furniture..
+driest
 laugh.i
 oreo
 anise/licoric
@@ -5506,6 +5507,7 @@ rendit
 30-40
 speakeasi
 2-4-1
+cheesteak
 fifti
 comparison.dvap
 joli
@@ -5746,7 +5748,6 @@ latest
 velveta
 etc.i
 sheik
-speech
 verison
 'chip
 flash-fri
@@ -5847,7 +5848,6 @@ you.today
 3chicken
 urgenc
 creation
-wildlif
 yolk
 isnt
 exception.disclaim
@@ -6310,7 +6310,7 @@ everyone.i
 inflat
 do.i
 cutesi
-wrath
+pizzawhat
 4oz
 sunshin
 fleck
@@ -6692,6 +6692,7 @@ magna
 je
 chelsea
 awesome.kabuki
+audienc
 waayi
 tum
 cancer
@@ -6713,7 +6714,6 @@ pat
 harsh
 judge.if
 sit.i
-audienc
 pac
 5:52
 5:50
@@ -6793,7 +6793,6 @@ capres
 landfil
 forbidden
 allergi
-anyhoo.i
 bagels.nic
 up-scal
 godfath
@@ -6900,6 +6899,7 @@ mistakenli
 burp
 statement
 mama
+free.tri
 contrari
 fold
 entertainment/performances.i
@@ -7071,7 +7071,7 @@ different.w
 tied..
 happens.a
 kickin
-free.tri
+toto
 becas
 that.cash
 granular
@@ -7522,7 +7522,6 @@ getcha
 matchstick
 rider
 glom
-2.99
 peppercorn
 coin
 everyth
@@ -7608,6 +7607,7 @@ cheuvront
 laptop
 something.i
 enlighten
+leinart
 expos
 stool-w
 endovenera
@@ -7661,7 +7661,7 @@ his/her
 smithwick
 uncoop
 peruvian
-leinart
+rude..
 .all
 assembl
 nj
@@ -8142,6 +8142,7 @@ me..
 window-
 eff
 gill
+wildlif
 7-
 splay
 remodl
@@ -8265,7 +8266,6 @@ tinker
 elixir
 negress
 conspir
-driest
 lifeless
 .tri
 infuri
@@ -8363,7 +8363,7 @@ bars/club
 fer
 bottomless
 phoenix.th
-chowmein
+throne
 clever
 short-par
 tail.it
@@ -8570,7 +8570,7 @@ mitt
 obes
 expected.i
 kitsch
-throne
+chowmein
 smashfri
 liklihood
 futurist

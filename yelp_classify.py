@@ -98,7 +98,9 @@ def graphThings(table,string):
     plt.rcParams
     plt.savefig(string)
 
+print "yelp_classify.py::starting"
 
+print "\n", "Context Classification: \n"
 
 #reading dataset
 yelp = pd.read_csv('yelp-csv.csv')
@@ -159,8 +161,10 @@ print("Fmeasure of goods:", (f_measure(refsets['goods'], testsets['goods'])))
 print("Precision of service:", (precision(refsets['service'], testsets['service'])))
 print("Recall of service:", (recall(refsets['service'], testsets['service'])))
 print("Fmeasure of service:", (f_measure(refsets['service'], testsets['service'])))
+graphThings(dataOO,"naivebayes.png")
+graphThings(dataOO0,"LinearSVC.png")
 
-"""
+
 #sentiment analysis
 print "\n", "Sentiment Analysis: \n"
 
@@ -180,13 +184,41 @@ Sfeaturesets = [(featuresToFind(rev,fullDist_), category) for (rev, category) in
 yelpS_train = Sfeaturesets[:500]
 yelpS_test = Sfeaturesets[500:1000]
 
+refsetsS = collections.defaultdict(set)
+testsetsS = collections.defaultdict(set)
 classifier = nltk.NaiveBayesClassifier.train(yelpS_train)
+for i, (feats, label) in enumerate(Sfeaturesets):
+    refsetsS[label].add(i)
+    observed = classifier.classify(feats)
+    testsetsS[observed].add(i)
+
 print("Naive Bayes Classifier accuracy: ",(nltk.classify.accuracy(classifier, yelpS_test)))
+print("Precision of pos:", (precision(refsetsS['pos'], testsetsS['pos'])))
+print("Recall of pos:", (recall(refsetsS['pos'], testsetsS['pos'])))
+print("Fmeasure of pos:", (f_measure(refsetsS['pos'], testsetsS['pos'])))
+print("Precision of neu:", (precision(refsetsS['neu'], testsetsS['neu'])))
+print("Recall of neu:", (recall(refsetsS['neu'], testsetsS['neu'])))
+print("Fmeasure of neu:", (f_measure(refsetsS['neu'], testsetsS['neu'])))
+print("Precision of neg:", (precision(refsetsS['neg'], testsetsS['neg'])))
+print("Recall of neg:", (recall(refsetsS['neg'], testsetsS['neg'])))
+print("Fmeasure of neg:", (f_measure(refsetsS['neg'], testsetsS['neg'])))
 
 LinearSVC_classifier = SklearnClassifier(LinearSVC())
-LinearSVC_classifier.train(yelp_train)
-print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelp_test)))
-"""
-
-graphThings(dataOO,"naivebayes.png")
-graphThings(dataOO0,"LinearSVC.png")
+LinearSVC_classifier.train(yelpS_train)
+for i, (feats, label) in enumerate(Sfeaturesets):
+    refsetsS[label].add(i)
+    observed = LinearSVC_classifier.classify(feats)
+    testsetsS[observed].add(i)
+print "\n"
+print("LinearSVC Classifier accuracy:", (nltk.classify.accuracy(LinearSVC_classifier, yelpS_test)))
+print("Precision of pos:", (precision(refsetsS['pos'], testsetsS['pos'])))
+print("Recall of pos:", (recall(refsetsS['pos'], testsetsS['pos'])))
+print("Fmeasure of pos:", (f_measure(refsetsS['pos'], testsetsS['pos'])))
+print("Precision of neu:", (precision(refsetsS['neu'], testsetsS['neu'])))
+print("Recall of neu:", (recall(refsetsS['neu'], testsetsS['neu'])))
+print("Fmeasure of neu:", (f_measure(refsetsS['neu'], testsetsS['neu'])))
+print("Precision of neg:", (precision(refsetsS['neg'], testsetsS['neg'])))
+print("Recall of neg:", (recall(refsetsS['neg'], testsetsS['neg'])))
+print("Fmeasure of neg:", (f_measure(refsetsS['neg'], testsetsS['neg'])))
+print ""
+print "yelp_classify.py::completed"
