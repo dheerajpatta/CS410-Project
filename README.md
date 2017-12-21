@@ -6,10 +6,10 @@ This project is for the University of Illinois Urbana-Champaign CS-410 Text Info
 ## Install
 The tool was written in python, some installations are required.
 
-'''
+```
 pip install -e .
 python download_nltk.py
-'''
+```
 
 ## Abstract
 Vertical search engines have become increasingly popular, they sift through limited databases for information. In particular location based mobile searching is extensively used for searching businesses that are close to the user or have high user ratings.The broad web searches cannot accommodate all of the users searches when it come to specific topics with implicit assumptions that are not captured in general web searching. One major example is Yelp, its content is specialized for users browsing information on service or goods. General web searches focus on a broad range of web page results while mobile searches focuses on the results closer to the users location. Results from services like yelp allow a user to rank results by distance ,ratings, or reviews. Customer preferences can be tracked by looking at the user’s reviews of visits on yelp. Being able to track user experience at a business could lead to greater traffic and sales at the business.
