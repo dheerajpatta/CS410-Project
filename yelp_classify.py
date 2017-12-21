@@ -20,6 +20,8 @@ import matplotlib.animation as animation
 from matplotlib import style
 from nltk.stem import PorterStemmer
 
+fname = 'yelp-csv.csv'
+
 def lower_tokenizer(text):
     tok = nltk.word_tokenize(text)
     token = [t.decode('utf8') for t in tok]

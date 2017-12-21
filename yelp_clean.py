@@ -11,6 +11,9 @@ import pandas as pd
 import nltk
 from nltk.stem import PorterStemmer
 
+fname = 'yelp-csv.csv'
+
+
 # lower_tokenizer will tokenize, lowercase each word, remove stop_words, and stem them
 def lower_tokenizer(text):
     tok = nltk.word_tokenize(text)
@@ -28,10 +31,7 @@ def lower_tokenizer(text):
 
 print "yelp_clean.py::starting"
 #reading dataset
-yelp = pd.read_csv('yelp.csv')
-yelp['user topic'] = ' '
-yelp.to_csv('yelp.csv')
-
+yelp = pd.read_csv(fname)
 
 #only interested in the 'text' since it the comments
 X = yelp['text']
